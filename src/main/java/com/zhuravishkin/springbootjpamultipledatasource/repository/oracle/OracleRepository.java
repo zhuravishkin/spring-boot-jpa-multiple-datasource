@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface OracleRepository extends JpaRepository<OracleEntity, Long> {
-    @Procedure(value = "insert_user")
+    @Procedure(value = "neo.insert_user_from_schema")
     void insertUser(
             @Param("phone_number") String phoneNumber,
             @Param("age") Integer age,
