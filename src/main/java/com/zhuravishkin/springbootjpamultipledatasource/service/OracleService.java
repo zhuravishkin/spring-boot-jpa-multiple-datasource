@@ -18,6 +18,10 @@ public class OracleService {
         return repository.findAll();
     }
 
+    public void insertUser(String phoneNumber, Integer age, String email, String action) {
+        repository.insertUser(phoneNumber, age, email, action);
+    }
+
     public OracleEntity saveOracleEntity(OracleEntity oracleEntity) {
         return repository.save(oracleEntity);
     }

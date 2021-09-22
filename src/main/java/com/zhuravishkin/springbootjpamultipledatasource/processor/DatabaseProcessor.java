@@ -19,8 +19,9 @@ public class DatabaseProcessor {
         this.postgresService = postgresService;
     }
 
-    @Scheduled(initialDelay = 1_000, fixedDelay = 10_000)
+    @Scheduled(initialDelay = 1_000, fixedDelay = 60_000)
     public void get() {
+        oracleService.insertUser("79306661008", 28, "trinity@gmail.com", "create");
         oracleService.getOracleEntities().forEach(System.out::println);
         postgresService.getPostgresEntities().forEach(System.out::println);
     }
